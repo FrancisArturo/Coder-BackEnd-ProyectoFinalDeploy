@@ -74,10 +74,10 @@ export default class App {
             if (route.path === "/") {
                 this.app.use(`/` , route.router);
             } else {
-                this.app.use(`/api/${this.process.env.API_VERSION}`, route.router);
+                this.app.use(`/api/${this.API_VERSION}`, route.router);
             }
         });
-        this.app.use(`/api/${this.process.env.API_VERSION}/docs`, swaggerUiExpress.serve, swaggerUiExpress.setup(this.specs));
+        this.app.use(`/api/${this.API_VERSION}/docs`, swaggerUiExpress.serve, swaggerUiExpress.setup(this.specs));
     }
     initHandlebars() {
         this.app.engine(
