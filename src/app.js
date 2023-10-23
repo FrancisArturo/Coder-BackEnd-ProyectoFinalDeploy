@@ -24,7 +24,7 @@ export default class App {
 
     constructor (routes) {
         this.app = express();
-        this.port = PORT || 8080;
+        this.port = process.env.PORT || 8080;
         this.logger = getLogger();
         this.env = process.env.NODE_ENV || "development";
         this.API_VERSION = process.env.API_VERSION || "v1";
