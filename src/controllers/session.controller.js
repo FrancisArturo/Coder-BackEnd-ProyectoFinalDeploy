@@ -1,4 +1,3 @@
-import { ADMIN_EMAIL, ADMIN_PASSWORD, EMAIL } from "../config/config.js";
 import UserDTO from "../dao/DTOs/user.dto.js";
 import { CartsService, TicketsService, UsersService } from "../repositories/index.js";
 import EnumsErrors from "../utils/error-enums.js";

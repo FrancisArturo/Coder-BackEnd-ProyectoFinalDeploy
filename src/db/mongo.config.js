@@ -1,6 +1,4 @@
 import { connect } from "mongoose";
-import { DB_CNN } from "../config/config.js";
-import { DB_NAME } from "../config/config.js"
 import { getLogger } from "../utils/logger.js";
 
 const logger = getLogger();

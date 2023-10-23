@@ -1,4 +1,4 @@
-import { EMAIL } from '../config/config.js';
+
 import { ProductsService } from '../repositories/index.js';
 import { transporter } from '../utils/transporter.js';
 import CustomError from "../utils/error-handler.js";

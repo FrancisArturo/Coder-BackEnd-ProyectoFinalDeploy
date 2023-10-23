@@ -1,4 +1,3 @@
-import { PERSISTENCE } from "../config/config.js";
 import connectDB from "../db/mongo.config.js";
 
 

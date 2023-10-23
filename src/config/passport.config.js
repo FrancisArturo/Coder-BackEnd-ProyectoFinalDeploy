@@ -3,7 +3,6 @@ import userModel from "../models/user.models.js";
 import GithubStrategy from "passport-github2";
 import jwt from "passport-jwt";
 import { cookieExtractor } from "../utils/jwt.js";
-import { GITHUB_CALLBACK_URL, GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET, SECRET_CODE_JWT } from "./config.js";
 import { cartModel } from "../models/cart.models.js";
 
 

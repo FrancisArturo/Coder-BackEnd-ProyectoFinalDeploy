@@ -5,7 +5,6 @@ import __dirname from "./dirname.js";
 import cookieParser from "cookie-parser";
 import passport from "passport";
 import initializePassport from "./config/passport.config.js";
-import { PORT, NODE_ENV, API_VERSION, PERSISTENCE } from "./config/config.js";
 import cors from "cors";
 import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUiExpress from "swagger-ui-express";

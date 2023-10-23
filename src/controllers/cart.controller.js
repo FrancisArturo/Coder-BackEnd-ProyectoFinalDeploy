@@ -1,4 +1,3 @@
-import { EMAIL, PHONE } from "../config/config.js";
 import { CartsService, ProductsService, TicketsService, UsersService } from "../repositories/index.js";
 import EnumsErrors from "../utils/error-enums.js";
 import CustomError from "../utils/error-handler.js";
