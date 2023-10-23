@@ -209,7 +209,7 @@ export default class CartsController {
             const cartProducts = updateCartProducts.products;
             const Ticketcreate = await this.ticketService.createTicket(order);
             transporter.sendMail({
-                from: EMAIL,
+                from: process.env.EMAIL,
                 to: user.user.email,
                 subject: `Purchase ticket ecommerce`,
                 html: `
@@ -227,7 +227,7 @@ export default class CartsController {
             if (userFound.phone) {
                 client.messages.create({
                 body: `Thanks for your Purchase ${user.user.firstName} ${user.user.lastName}, your ticket N° is: ${Ticketcreate.code}`,
-                from: PHONE,
+                from: process.env.PHONE,
                 to: `+${userFound.phone}`,
                 })
             };

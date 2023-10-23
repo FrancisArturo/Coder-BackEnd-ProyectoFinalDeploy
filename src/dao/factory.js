@@ -4,7 +4,7 @@ import connectDB from "../db/mongo.config.js";
 
 export let Products, Users, Carts, Tickets; 
 
-switch (PERSISTENCE) {
+switch (process.env.PERSISTENCE) {
     case "MONGO":
         connectDB();
         const {default: ProductsMongo} = await import("./mongo/products.mongo.js");

@@ -4,11 +4,11 @@ import { getLogger } from "../utils/logger.js";
 const logger = getLogger();
 export const configConnection = {
 
-    url: DB_CNN,
+    url: process.env.DB_CNN,
     options: {
         useNewUrlParser: true,
         useUnifiedTopology: true,
-        dbName: DB_NAME,
+        dbName: process.env.DB_NAME,
     }
 }
 

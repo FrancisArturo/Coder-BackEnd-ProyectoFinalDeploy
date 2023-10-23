@@ -187,7 +187,7 @@ export default class SessionController {
             };
             const token = generateJWT({...signUser});
             transporter.sendMail({
-                from: EMAIL,
+                from: process.env.EMAIL,
                 to: userExist.email,
                 subject: `Recover your password`,
                 html: `
@@ -361,7 +361,7 @@ export default class SessionController {
                     await this.cartsService.deleteCartById(element.carts);
                     InactiveUserExist = true;
                     transporter.sendMail({
-                        from: EMAIL,
+                        from: process.env.EMAIL,
                         to: element.email,
                         subject: `Ecommerce user eliminated`,
                         html: `

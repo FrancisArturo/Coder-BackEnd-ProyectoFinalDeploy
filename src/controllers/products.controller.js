@@ -119,7 +119,7 @@ export default class ProductsController {
             const productDelete = await this.productsService.deleteProduct(pid);
             if (productFind.owner != "admin") {
                 transporter.sendMail({
-                    from: EMAIL,
+                    from: process.env.EMAIL,
                     to: productFind.owner,
                     subject: `Ecommerce product removed`,
                     html: `

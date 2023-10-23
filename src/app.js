@@ -26,9 +26,9 @@ export default class App {
         this.app = express();
         this.port = PORT || 8080;
         this.logger = getLogger();
-        this.env = NODE_ENV || "development";
-        this.API_VERSION = API_VERSION || "v1";
-        this.persistence = PERSISTENCE;
+        this.env = process.env.NODE_ENV || "development";
+        this.API_VERSION = process.env.API_VERSION || "v1";
+        this.persistence = process.env.PERSISTENCE;
         this.specs = swaggerJSDoc(swaggerOpt);
         
         this.listen();
@@ -74,10 +74,10 @@ export default class App {
             if (route.path === "/") {
                 this.app.use(`/` , route.router);
             } else {
-                this.app.use(`/api/${this.API_VERSION}`, route.router);
+                this.app.use(`/api/${this.process.env.API_VERSION}`, route.router);
             }
         });
-        this.app.use(`/api/${this.API_VERSION}/docs`, swaggerUiExpress.serve, swaggerUiExpress.setup(this.specs));
+        this.app.use(`/api/${this.process.env.API_VERSION}/docs`, swaggerUiExpress.serve, swaggerUiExpress.setup(this.specs));
     }
     initHandlebars() {
         this.app.engine(

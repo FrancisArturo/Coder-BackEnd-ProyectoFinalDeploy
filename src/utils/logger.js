@@ -52,7 +52,6 @@ const prodLogger = winston.createLogger({
             level: "info",
             format: winston.format.combine(
                 winston.format.colorize(),
-                //winston.format.simple()
                 alignColorsAndTime
             )
     }),
@@ -81,12 +80,12 @@ const loggerLevelEnv = {
 }
 
 export function setLogger (req, res, next) {
-    req.logger = loggerLevelEnv[NODE_ENV];
+    req.logger = loggerLevelEnv[process.env.NODE_ENV];
     next();
 };
 
 export const getLogger = () => {
-    if (NODE_ENV == "production") {
+    if (process.env.NODE_ENV == "production") {
         return prodLogger;
     } else {
         return devLogger;
