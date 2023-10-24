@@ -114,10 +114,10 @@ export default class SessionController {
     loginUserController = async (req, res) => {
         try {
             const userSubmitted = req.body;
-            if (userSubmitted.email == ADMIN_EMAIL && userSubmitted.password == ADMIN_PASSWORD) {
+            if (userSubmitted.email == process.env.ADMIN_EMAIL && userSubmitted.password == process.env.ADMIN_PASSWORD) {
                 const signUser = {
                     firstName: "adminCoder",
-                    email: ADMIN_EMAIL,
+                    email: process.env.ADMIN_EMAIL,
                     role: "admin",
                 };
                 const token = generateJWT({...signUser});
