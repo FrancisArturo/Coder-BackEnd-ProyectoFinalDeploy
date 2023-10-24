@@ -24,7 +24,7 @@ recoverBtn.addEventListener("click", async(e) => {
         password: passwordRecover.value
     };
     const data = await recoverCompletePassword(psw);
-    console.log(data.mesagge)
+    console.log(data.message)
     if (data.message == "the password must be different from the previous one") {
         return alert("the password must be different from the previous one");
     } else {
