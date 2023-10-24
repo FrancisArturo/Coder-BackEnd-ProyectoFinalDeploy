@@ -197,7 +197,7 @@ export default class SessionController {
                         <p>Follow the next link to continue the process</p>
                         <br>
                         <br>  
-                        <a href="http://localhost:8000/recover/${token}">CLICK HERE</a>
+                        <a href="https://proyectofinaldeploy-production.up.railway.app/recover/${token}">CLICK HERE</a>
                         <br>
                         <br>
                         <p>This link has a duration of 60 min, After this you will have to request a new link</p>

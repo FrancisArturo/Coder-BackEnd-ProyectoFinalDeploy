@@ -3,7 +3,7 @@ import { expect } from "chai";
 import { beforeEach } from "mocha";
 
 
-const BASE_API_URL = "http://localhost:5000"
+const BASE_API_URL = "https://proyectofinaldeploy-production.up.railway.app/"
 const PRODUCTS_ROUTE = "/api/v1/products";
 const CARTS_ROUTE = "/api/v1/carts";
 const SESSION_ROUTE = "/api/v1/session";
