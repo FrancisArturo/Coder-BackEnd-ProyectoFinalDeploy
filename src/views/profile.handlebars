@@ -24,7 +24,7 @@
     <br>
     {{#if userRole}}
         <br>
-        <button type="button"><a href="/premium">update to premium</a></button>
+        <button type="button"><a href="/api/v1/session/users/{{user.user}}/premium">update to premium</a></button>
         <br>
     {{/if}}
     {{#if premiumRole}}
